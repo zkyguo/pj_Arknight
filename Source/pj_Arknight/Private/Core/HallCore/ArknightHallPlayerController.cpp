@@ -3,3 +3,7 @@
 
 #include "Core/HallCore/ArknightHallPlayerController.h"
 
+AArknightHallPlayerController::AArknightHallPlayerController()
+{
+	bShowMouseCursor = true;
+}

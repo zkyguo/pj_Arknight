@@ -2,6 +2,7 @@
 
 
 #include "Core/GameCore/ArknightPlayerController.h"
+#include <Core/GameCore/ArknightGameCamera.h>
 
 AArknightPlayerController::AArknightPlayerController()
 {
@@ -20,6 +21,8 @@ void AArknightPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
 	SetInputModeGameAndUI();
+	SetInputComponent();
+	
 }
 
 void AArknightPlayerController::SetInputModeGameAndUI()
@@ -31,6 +34,34 @@ void AArknightPlayerController::SetInputModeGameAndUI()
 	InputMode.SetHideCursorDuringCapture(false);
 
 	SetInputMode(InputMode);
+	
+}
+
+void AArknightPlayerController::SetInputComponent()
+{
+	Super::SetupInputComponent();
+
+	InputComponent->BindAction("MouseWheelUp", IE_Pressed, this, &AArknightPlayerController::MouseWheelUp);
+	InputComponent->BindAction("MouseWheelDown", IE_Pressed, this, &AArknightPlayerController::MouseWheelDown);
+}
+
+static float WheelValue = 100.f;
+void AArknightPlayerController::MouseWheelUp()
+{
+	AArknightGameCamera* camera = Cast<AArknightGameCamera>(GetPawn());
+	if (camera)
+	{
+		camera->zoom(true, WheelValue);
+	}
+}
+
+void AArknightPlayerController::MouseWheelDown()
+{
+	AArknightGameCamera* camera = Cast<AArknightGameCamera>(GetPawn());
+	if (camera)
+	{
+		camera->zoom(false, WheelValue);
+	}
 }
 
 

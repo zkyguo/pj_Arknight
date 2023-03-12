@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/GameModeBase.h"
+#include "GameFramework/GameMode.h"
 #include "pj_ArknightGameModeBase.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class PJ_ARKNIGHT_API Apj_ArknightGameModeBase : public AGameModeBase
+class PJ_ARKNIGHT_API Apj_ArknightGameModeBase : public AGameMode
 {
 	GENERATED_BODY()
 

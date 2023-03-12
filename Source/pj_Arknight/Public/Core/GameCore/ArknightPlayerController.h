@@ -26,6 +26,10 @@ public :
 	/// </summary>
 	void SetInputModeGameAndUI();
 
+	void SetInputComponent();
+	void MouseWheelUp();
+	void MouseWheelDown();
+
 protected :
 	FScreenMoveUnits ScreenMoveUnits;
 };

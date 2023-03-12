@@ -36,7 +36,7 @@ EScreenMoveState FScreenMoveUnits::CursorMove(const APlayerController*playerCont
 		{
 			return EScreenMoveState::RightUp;
 		}
-		else if (FMath::IsNearlyEqual(MousePositionX, MousePositionX, 5.f) && FMath::IsNearlyEqual(MousePositionY, SizeY, 5.f))
+		else if (FMath::IsNearlyEqual(MousePositionX, SizeX, 5.f) && FMath::IsNearlyEqual(MousePositionY, SizeY, 5.f))
 		{
 			return EScreenMoveState::RightDown;
 		}

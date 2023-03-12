@@ -13,5 +13,7 @@ UCLASS()
 class PJ_ARKNIGHT_API AArknightHallPlayerController : public APlayerController
 {
 	GENERATED_BODY()
-	
+
+public :
+	AArknightHallPlayerController();
 };

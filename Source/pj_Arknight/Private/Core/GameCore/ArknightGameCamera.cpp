@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
-#include "GameFramework/SpringArmComponent.h"
 #include <Camera/CameraComponent.h>
 #include <Components/BoxComponent.h>
+#include "GameFramework/SpringArmComponent.h"
 #include "Core/GameCore/ArknightGameCamera.h"
 
 
@@ -40,6 +40,25 @@ void AArknightGameCamera::Tick(float DeltaTime)
 void AArknightGameCamera::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
+
+}
+
+void AArknightGameCamera::zoom(bool bZoom, const float& zoomspeed)
+{
+	if (bZoom)
+	{
+		if (CameraBoom->TargetArmLength > 400)
+		{
+			CameraBoom->TargetArmLength -= zoomspeed * 2;
+		}
+	}
+	else
+	{
+		if (CameraBoom->TargetArmLength < 400)
+		{
+			CameraBoom->TargetArmLength += zoomspeed * 2;
+		}
+	}
 
 }
 
