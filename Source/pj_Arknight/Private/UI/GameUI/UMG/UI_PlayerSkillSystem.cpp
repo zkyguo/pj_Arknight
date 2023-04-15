@@ -3,3 +3,9 @@
 
 #include "UI/GameUI/UMG/UI_PlayerSkillSystem.h"
 
+void UUI_PlayerSkillSystem::NativeConstruct()
+{
+	Super::NativeConstruct();
+
+	auto KeyMapping = GetDefault<UInputSettings>()->GetActionMappings().FindByPredicate([&](FInputActionKeyMapping& EntryUI) { return(EntryUI.ActionName == "FreezSkill"); });
+}

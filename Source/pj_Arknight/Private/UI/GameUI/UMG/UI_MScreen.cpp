@@ -3,3 +3,7 @@
 
 #include "UI/GameUI/UMG/UI_MScreen.h"
 
+void UUI_MScreen::NativeConstruct()
+{
+	Super::NativeConstruct();
+}

@@ -3,3 +3,7 @@
 
 #include "UI/GameUI/UMG/Inventory/UI_InventorySlot.h"
 
+void UUI_InventorySlot::NativeConstruct()
+{
+	Super::NativeConstruct();
+}
