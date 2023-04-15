@@ -3,15 +3,18 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/GameModeBase.h"
+#include "GameFramework/GameMode.h"
 #include "ArknightSelectLevelGameMode.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class PJ_ARKNIGHT_API AArknightSelectLevelGameMode : public AGameModeBase
+class PJ_ARKNIGHT_API AArknightSelectLevelGameMode : public AGameMode
 {
 	GENERATED_BODY()
 	
+public:
+	AArknightSelectLevelGameMode();
+	virtual void BeginPlay() override;
 };
