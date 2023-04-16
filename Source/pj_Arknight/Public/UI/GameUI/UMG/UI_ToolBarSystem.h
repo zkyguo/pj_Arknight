@@ -19,7 +19,7 @@ class PJ_ARKNIGHT_API UUI_ToolBarSystem : public UUI_RuleOfTheWidget
 	GENERATED_BODY()
 
 	UPROPERTY(meta = (BindWidget))
-	UTextBlock* GameGlob;
+	UTextBlock* GameGoldRemain;
 
 	UPROPERTY(meta = (BindWidget))
 	UTextBlock* ChampionDeathNumber;

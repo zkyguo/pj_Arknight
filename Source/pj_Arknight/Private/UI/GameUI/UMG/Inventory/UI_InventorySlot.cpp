@@ -6,4 +6,9 @@
 void UUI_InventorySlot::NativeConstruct()
 {
 	Super::NativeConstruct();
+	ChampionsInventorySlotButton->OnClicked.AddDynamic(this, &UUI_InventorySlot::OnClickWidget);
+}
+
+void UUI_InventorySlot::OnClickWidget()
+{
 }

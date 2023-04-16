@@ -22,7 +22,7 @@ class PJ_ARKNIGHT_API UUI_Inventory : public UUI_RuleOfTheWidget
 	UPROPERTY(meta = (BindWidget))
 	UUniformGridPanel* SlotArrayInventory;
 
-	UPROPERTY(EditDefaultOnly, Category = UI)
+	UPROPERTY(EditDefaultsOnly, Category = UI)
 	TSubclassOf<UUI_InventorySlot> InventorySlotClass;
 
 	

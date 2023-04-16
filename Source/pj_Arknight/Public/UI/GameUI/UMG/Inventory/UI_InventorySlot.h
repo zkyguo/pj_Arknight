@@ -38,4 +38,7 @@ class PJ_ARKNIGHT_API UUI_InventorySlot : public UUI_RuleOfTheWidget
 
 public:
 	virtual void NativeConstruct();
+
+	UFUNCTION()
+	void OnClickWidget();
 };
