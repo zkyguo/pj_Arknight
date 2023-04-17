@@ -14,4 +14,7 @@ class PJ_ARKNIGHT_API UArknightGameInstance : public UGameInstance
 {
 	GENERATED_BODY()
 	
+public :
+	virtual void Init() override;
+
 };
