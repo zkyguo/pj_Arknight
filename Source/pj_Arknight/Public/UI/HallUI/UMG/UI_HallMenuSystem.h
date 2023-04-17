@@ -17,6 +17,10 @@ class PJ_ARKNIGHT_API UUI_HallMenuSystem : public UUI_RuleOfTheWidget
 	UPROPERTY(meta = (BindWidget))
 	UButton* GameStartButton;
 
+	
+	UPROPERTY(meta = (BindWidget))
+	UButton* SecretTerritoryButton;
+
 	UPROPERTY(meta = (BindWidget))
     UButton* HistoryButton;
 
@@ -28,6 +32,9 @@ class PJ_ARKNIGHT_API UUI_HallMenuSystem : public UUI_RuleOfTheWidget
 
 	UPROPERTY(meta = (BindWidget))
 	UButton* BrowserButton;
+
+	UPROPERTY(meta = (BindWidget))
+	UButton* DLCButton;
 
 	UPROPERTY(meta = (BindWidget))
 	UButton* QuitGameButton;
