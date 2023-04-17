@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\unrealproject\\pj_arknight\\plugins\\tutorial\\simpletutorial\\source\\simpletutorial\\private\\simpletutorial.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\unrealproject\\pj_arknight\\intermediate\\build\\win64\\pj_arknighteditor\\debuggame\\engine\\sharedpch.engine.nonoptimized.shadowerrors.h.pch",
+        "Includes": [
+            "c:\\unrealproject\\pj_arknight\\plugins\\tutorial\\simpletutorial\\intermediate\\build\\win64\\unrealeditor\\debuggame\\simpletutorial\\definitions.simpletutorial.h",
+            "c:\\unrealproject\\pj_arknight\\plugins\\tutorial\\simpletutorial\\source\\simpletutorial\\public\\simpletutorial.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -12,11 +12,18 @@ void UUI_HallMenuSystem::NativeConstruct()
 	TutorialWebsiteButton->OnClicked.AddDynamic(this, &UUI_HallMenuSystem::TutorialWebsite);
 	BrowserButton->OnClicked.AddDynamic(this, &UUI_HallMenuSystem::Browser);
 	QuitGameButton->OnClicked.AddDynamic(this, &UUI_HallMenuSystem::QuitGame);
+	SecretTerritoryButton->OnClicked.AddDynamic(this, &UUI_HallMenuSystem::SecretTerritory);
+	DLCButton->OnClicked.AddDynamic(this, &UUI_HallMenuSystem::DLC);
 }
 
 void UUI_HallMenuSystem::GameStart()
 {
 	UGameplayStatics::OpenLevel(GetWorld(), "SelectLevel");
+}
+
+void UUI_HallMenuSystem::SecretTerritory()
+{
+
 }
 
 void UUI_HallMenuSystem::History()
@@ -33,6 +40,11 @@ void UUI_HallMenuSystem::TutorialWebsite()
 
 void UUI_HallMenuSystem::Browser()
 {
+}
+
+void UUI_HallMenuSystem::DLC()
+{
+
 }
 
 void UUI_HallMenuSystem::QuitGame()

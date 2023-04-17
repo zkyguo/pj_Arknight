@@ -17,7 +17,6 @@ class PJ_ARKNIGHT_API UUI_HallMenuSystem : public UUI_RuleOfTheWidget
 	UPROPERTY(meta = (BindWidget))
 	UButton* GameStartButton;
 
-	
 	UPROPERTY(meta = (BindWidget))
 	UButton* SecretTerritoryButton;
 
@@ -44,6 +43,8 @@ public :
 	UFUNCTION()
 	void GameStart();
 	UFUNCTION()
+	void SecretTerritory();
+	UFUNCTION()
 	void History();
 	UFUNCTION()
 	void GameSettings();
@@ -51,6 +52,8 @@ public :
 	void TutorialWebsite();
 	UFUNCTION()
 	void Browser();
+	UFUNCTION()
+	void DLC();
 	UFUNCTION()
 	void QuitGame();
 

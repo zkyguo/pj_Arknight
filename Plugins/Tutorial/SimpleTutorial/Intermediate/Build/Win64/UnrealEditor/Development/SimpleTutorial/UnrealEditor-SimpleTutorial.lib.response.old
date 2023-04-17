@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-SimpleTutorial.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Unrealproject\pj_Arknight\Intermediate\Build\Win64\pj_ArknightEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\Unrealproject\pj_Arknight\Plugins\Tutorial\SimpleTutorial\Intermediate\Build\Win64\UnrealEditor\Development\SimpleTutorial\SimpleTutorial.cpp.obj"
+"C:\Unrealproject\pj_Arknight\Plugins\Tutorial\SimpleTutorial\Intermediate\Build\Win64\UnrealEditor\Development\SimpleTutorial\Default.rc2.res"
+/OUT:"C:\Unrealproject\pj_Arknight\Plugins\Tutorial\SimpleTutorial\Intermediate\Build\Win64\UnrealEditor\Development\SimpleTutorial\UnrealEditor-SimpleTutorial.lib"
