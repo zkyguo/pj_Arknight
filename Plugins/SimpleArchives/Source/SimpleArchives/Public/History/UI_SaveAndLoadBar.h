@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "UI/Core/UI_RuleOfTheWidget.h"
+#include "Blueprint/UserWidget.h"
 #include "UI_SaveAndLoadBar.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class PJ_ARKNIGHT_API UUI_SaveAndLoadBar : public UUI_RuleOfTheWidget
+class SIMPLEARCHIVES_API UUI_SaveAndLoadBar : public UUserWidget
 {
 	GENERATED_BODY()
 	
