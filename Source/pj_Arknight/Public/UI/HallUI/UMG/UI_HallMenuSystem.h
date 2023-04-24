@@ -3,9 +3,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UI/Core/UI_RuleOfTheWidget.h"
+#include "Components/Button.h"
 #include "UI_HallMenuSystem.generated.h"
 
-class UButton;
 /**
  * 
  */
@@ -40,21 +40,13 @@ class PJ_ARKNIGHT_API UUI_HallMenuSystem : public UUI_RuleOfTheWidget
 
 public :
 	virtual void NativeConstruct();
-	UFUNCTION()
-	void GameStart();
-	UFUNCTION()
-	void SecretTerritory();
-	UFUNCTION()
-	void History();
-	UFUNCTION()
-	void GameSettings();
-	UFUNCTION()
-	void TutorialWebsite();
-	UFUNCTION()
-	void Browser();
-	UFUNCTION()
-	void DLC();
-	UFUNCTION()
-	void QuitGame();
-
+	
+	void BindGameStart(FOnButtonClickedEvent ClickedEvent);
+	void BindSecretTerritory(FOnButtonClickedEvent ClickedEvent);
+	void BindHistory(FOnButtonClickedEvent ClickedEvent);
+	void BindGameSetting(FOnButtonClickedEvent ClickedEvent);
+	void BindTutorial(FOnButtonClickedEvent ClickedEvent);
+	void BindBrowser(FOnButtonClickedEvent ClickedEvent);
+	void BindDLC(FOnButtonClickedEvent ClickedEvent);
+	void BindQuitGame(FOnButtonClickedEvent ClickedEvent);
 };

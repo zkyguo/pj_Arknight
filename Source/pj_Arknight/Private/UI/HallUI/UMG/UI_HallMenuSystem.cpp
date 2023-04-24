@@ -1,52 +1,50 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 #include "UI/HallUI/UMG/UI_HallMenuSystem.h"
-#include "Components/Button.h"
-#include <Kismet/GameplayStatics.h>
+
 
 void UUI_HallMenuSystem::NativeConstruct()
 {
 	Super::NativeConstruct();
-	GameStartButton->OnClicked.AddDynamic(this, &UUI_HallMenuSystem::GameStart);
-	HistoryButton->OnClicked.AddDynamic(this, &UUI_HallMenuSystem::History);
-	GameSettingButton->OnClicked.AddDynamic(this, &UUI_HallMenuSystem::GameSettings);
-	TutorialWebsiteButton->OnClicked.AddDynamic(this, &UUI_HallMenuSystem::TutorialWebsite);
-	BrowserButton->OnClicked.AddDynamic(this, &UUI_HallMenuSystem::Browser);
-	QuitGameButton->OnClicked.AddDynamic(this, &UUI_HallMenuSystem::QuitGame);
-	SecretTerritoryButton->OnClicked.AddDynamic(this, &UUI_HallMenuSystem::SecretTerritory);
-	DLCButton->OnClicked.AddDynamic(this, &UUI_HallMenuSystem::DLC);
+	
 }
 
-void UUI_HallMenuSystem::GameStart()
+void UUI_HallMenuSystem::BindGameStart(FOnButtonClickedEvent ClickedEvent)
 {
-	UGameplayStatics::OpenLevel(GetWorld(), "SelectLevel");
+	GameStartButton->OnClicked = ClickedEvent;
 }
 
-void UUI_HallMenuSystem::SecretTerritory()
+void UUI_HallMenuSystem::BindSecretTerritory(FOnButtonClickedEvent ClickedEvent)
 {
-
+	SecretTerritoryButton->OnClicked = ClickedEvent;
 }
 
-void UUI_HallMenuSystem::History()
+void UUI_HallMenuSystem::BindHistory(FOnButtonClickedEvent ClickedEvent)
 {
+	HistoryButton->OnClicked = ClickedEvent;
 }
 
-void UUI_HallMenuSystem::GameSettings()
+void UUI_HallMenuSystem::BindGameSetting(FOnButtonClickedEvent ClickedEvent)
 {
+	GameSettingButton->OnClicked = ClickedEvent;
 }
 
-void UUI_HallMenuSystem::TutorialWebsite()
+void UUI_HallMenuSystem::BindTutorial(FOnButtonClickedEvent ClickedEvent)
 {
+	TutorialWebsiteButton->OnClicked = ClickedEvent;
 }
 
-void UUI_HallMenuSystem::Browser()
+void UUI_HallMenuSystem::BindBrowser(FOnButtonClickedEvent ClickedEvent)
 {
+	BrowserButton->OnClicked = ClickedEvent;
 }
 
-void UUI_HallMenuSystem::DLC()
+void UUI_HallMenuSystem::BindDLC(FOnButtonClickedEvent ClickedEvent)
 {
-
+	DLCButton->OnClicked = ClickedEvent;
 }
 
-void UUI_HallMenuSystem::QuitGame()
+void UUI_HallMenuSystem::BindQuitGame(FOnButtonClickedEvent ClickedEvent)
 {
+	QuitGameButton->OnClicked = ClickedEvent;
 }
+
