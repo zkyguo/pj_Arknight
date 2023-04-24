@@ -75,19 +75,22 @@ UserObject* CreateAssistWidget(T* ThisClass, UClass* AssistClass, USizeBox* Widg
 	}
 
 	//if there exists an child 
-	if (WidgetArray->GetChildAt(0)->IsA(AssistClass))
+	if (WidgetArray->GetChildAt(0))
 	{
-		//Finish Transition
+		if (WidgetArray->GetChildAt(0)->IsA(AssistClass))
+		{
+			//Finish Transition
 
-		return UserObjectElement;
+			return UserObjectElement;
+		}
+		else
+		{
+			WidgetArray->ClearChildren();
+		}
 	}
-	else
-	{
-		WidgetArray->ClearChildren();
-	}
-
+	
 	//Add Object to size box
-	UserObjectElement = CreateAssistWidget<UserObject>(ThisClass->GetWorld(), AssistClass);
+	UserObjectElement = CreateWidget<UserObject>(ThisClass->GetWorld(), AssistClass);
 
 	if (UserObjectElement)
 	{
@@ -123,13 +126,13 @@ void UUI_MainHall::History()
 void UUI_MainHall::GameSettings()
 {
 	//Show widget of GameSetting
-	CreateAssistWidget<UUI_MainHall, UUI_GameSettingSystem>(this, SaveAndLoadSystemClass, BoxList);
+	CreateAssistWidget<UUI_MainHall, UUI_GameSettingSystem>(this, GameSettingsSystemClass, BoxList);
 }
 
 void UUI_MainHall::TutorialWebsite()
 {
 	//Show widget of GameSetting
-	CreateAssistWidget<UUI_MainHall, UUI_TutorialSystem>(this, SaveAndLoadSystemClass, BoxList);
+	CreateAssistWidget<UUI_MainHall, UUI_TutorialSystem>(this, TutorialSystemClass, BoxList);
 }
 
 void UUI_MainHall::Browser()
