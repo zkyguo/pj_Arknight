@@ -14,6 +14,8 @@ class PJ_ARKNIGHT_API AEnemy : public ARuleOfCharacter
 {
 	GENERATED_BODY()
 
-		
+public :
+	virtual void BeginPlay() override;
+	virtual void Tick(float DeltaTime) override;
 	
 };
