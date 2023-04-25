@@ -8,6 +8,21 @@ public class pj_Arknight : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-        PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "HeadMountedDisplay", "NavigationSystem", "AIModule", "Niagara", "ToolClass","UMG", "SceneLoading", "SimpleArchives", "SimpleGameSetting", "SimpleTutorial" });
+        PublicDependencyModuleNames.AddRange(new string[] { 
+			"Core",
+			"CoreUObject", 
+			"Engine", 
+			"InputCore",
+			"HeadMountedDisplay", 
+			"NavigationSystem", 
+			"AIModule",
+			"Niagara",
+			"ToolClass",
+			"UMG", 
+			"SceneLoading", 
+			"SimpleArchives", 
+			"SimpleGameSetting",
+			"SimpleTutorial", 
+			 });
     }
 }

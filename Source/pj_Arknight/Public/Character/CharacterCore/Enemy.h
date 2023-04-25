@@ -13,5 +13,7 @@ UCLASS()
 class PJ_ARKNIGHT_API AEnemy : public ARuleOfCharacter
 {
 	GENERATED_BODY()
+
+		
 	
 };
