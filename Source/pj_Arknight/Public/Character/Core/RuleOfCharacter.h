@@ -56,7 +56,7 @@ protected:
 	virtual bool IsTeam();
 
 public:
-	UFUNCTION(Blueprintable, BlueprintPure, Category = "Champion|Attribute")
+	UFUNCTION(Blueprintable, BlueprintPure, Category = "Character|Attribute")
 	bool isActive() {return IsDead();}
 
 public :
