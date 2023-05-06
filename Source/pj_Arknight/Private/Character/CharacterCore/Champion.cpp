@@ -5,8 +5,8 @@
 
 AChampion::AChampion()
 {
-	StaticMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Champion"));
-	StaticMesh->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
+	CharacterMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("ChampionMesh"));
+	CharacterMesh->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
 }
 
 float AChampion::TakeDamage(float damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageSource)

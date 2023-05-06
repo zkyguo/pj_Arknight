@@ -22,7 +22,8 @@ public class pj_Arknight : ModuleRules
 			"SceneLoading", 
 			"SimpleArchives", 
 			"SimpleGameSetting",
-			"SimpleTutorial", 
-			 });
+			"SimpleTutorial",
+			"ApexDestruction",
+             });
     }
 }

@@ -7,7 +7,6 @@
 #include "Champion.generated.h"
 
 
-
 /**
  * 
  */
@@ -16,14 +15,11 @@ class PJ_ARKNIGHT_API AChampion : public ARuleOfCharacter
 {
 	GENERATED_BODY()
 
+public :
 	AChampion();
 
 	UPROPERTY(VisibleAnywhere,BlueprintReadOnly, Category="BaseAttribute",meta=(AllowPrivateAccess = true))
-    UParticleSystemComponent* ParticleMesh;
-
-	UPROPERTY(VisibleAnywhere,BlueprintReadOnly, Category="BaseAttribute",meta=(AllowPrivateAccess = true))
-    UStaticMeshComponent* StaticMesh;
-
+	USkeletalMeshComponent* CharacterMesh;
 
 protected:
 	virtual float TakeDamage(float damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageSource);

@@ -24,5 +24,10 @@
 				"Editor"
 			]
 		}
+		,
+		{
+			"Name": "ApexDestruction",
+			"Enabled": true
+		}
 	]
 }

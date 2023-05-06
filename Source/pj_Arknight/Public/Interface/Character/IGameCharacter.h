@@ -1,6 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 
+/// <summary>
+/// Describe common action of a game character
+/// </summary>
 class IGameCharacter
 {
 public:
