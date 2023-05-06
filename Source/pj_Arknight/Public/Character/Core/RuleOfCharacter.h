@@ -55,6 +55,10 @@ protected:
 	virtual float GetMaxHealth();
 	virtual bool IsTeam();
 
+public:
+	UFUNCTION(Blueprintable, BlueprintPure, Category = "Champion|Attribute")
+	bool isActive() {return IsDead();}
+
 public :
 	FORCEINLINE AArknightPlayerController* GetGameController() { return GetWorld() ? GetWorld()->GetFirstPlayerController<AArknightPlayerController>() : NULL; }
 	FORCEINLINE AArknightGameState* GetGameState() { return GetWorld() ? GetWorld()->GetGameState<AArknightGameState>() : NULL; }

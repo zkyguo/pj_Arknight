@@ -18,8 +18,10 @@ class PJ_ARKNIGHT_API AChampion : public ARuleOfCharacter
 public :
 	AChampion();
 
-	UPROPERTY(VisibleAnywhere,BlueprintReadOnly, Category="BaseAttribute",meta=(AllowPrivateAccess = true))
 	USkeletalMeshComponent* CharacterMesh;
+
+    UPROPERTY(VisibleAnywhere,BlueprintReadOnly, Category="BaseAttribute")
+	FRotator ChampionRotator;
 
 protected:
 	virtual float TakeDamage(float damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageSource);
