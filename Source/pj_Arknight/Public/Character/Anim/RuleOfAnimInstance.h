@@ -13,5 +13,18 @@ UCLASS()
 class PJ_ARKNIGHT_API URuleOfAnimInstance : public UAnimInstance
 {
 	GENERATED_BODY()
-	
+
+	virtual void NativeInitializeAnimation();
+	virtual void NativeUpdateAnimation(float DeltaSeconds);
+
+public :
+	URuleOfAnimInstance();
+
+public :
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="AnimAttribute")
+	bool isAttack;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="AnimAttribute")
+	bool isDead;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="AnimAttribute")
+	float Velocity;
 };

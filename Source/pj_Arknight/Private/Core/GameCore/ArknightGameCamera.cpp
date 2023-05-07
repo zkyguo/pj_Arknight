@@ -20,6 +20,10 @@ AArknightGameCamera::AArknightGameCamera()
 
 	CameraBoom->TargetArmLength = 800.f;
 	CameraBoom->SetRelativeRotation(FRotator(-60.f, 0.f, 0.f));
+
+	MarkBox->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+	MarkBox->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Ignore);
+	
 }
 
 // Called when the game starts or when spawned
