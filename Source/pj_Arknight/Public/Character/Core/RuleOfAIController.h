@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Character/Core/RuleOfAIController.h"
-#include "EnemyAiController.generated.h"
+#include "AIController.h"
+#include "RuleOfAIController.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class PJ_ARKNIGHT_API AEnemyAiController : public ARuleOfAIController
+class PJ_ARKNIGHT_API ARuleOfAIController : public AAIController
 {
 	GENERATED_BODY()
 	
