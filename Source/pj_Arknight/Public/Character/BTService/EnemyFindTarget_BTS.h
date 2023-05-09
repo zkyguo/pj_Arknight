@@ -18,6 +18,12 @@ class PJ_ARKNIGHT_API UEnemyFindTarget_BTS : public UBTService
 	
 public : 
 
+	/// <summary>
+	/// Describe actions run during one tick of node BT
+	/// </summary>
+	/// <param name="OwnerComp"></param>
+	/// <param name="NodeMemory"></param>
+	/// <param name="DeltaSeconds"></param>
 	virtual void TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds) override;
 
 	UPROPERTY(EditAnywhere, Category="BlackBoard")
@@ -25,6 +31,9 @@ public :
 
 	UPROPERTY(EditAnywhere, Category="BlackBoard")
 	struct FBlackboardKeySelector BlackBoardKey_Distance;
+	
+	UPROPERTY(EditAnywhere, Category="BlackBoard")
+	struct FBlackboardKeySelector BlackBoardKey_Location;
 
 	/** Notify called after GameplayTask finishes initialization (not active yet) */
 	virtual void OnGameplayTaskInitialized(UGameplayTask& Task) {}

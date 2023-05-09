@@ -33,15 +33,18 @@ void UEnemyFindTarget_BTS::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* No
 					if (Target->isActive())
 					{
 						BlackBoard->SetValueAsObject(BlackBoardKey_Target.SelectedKeyName, Target.Get());
+						BlackBoard->SetValueAsVector(BlackBoardKey_Location.SelectedKeyName, Target.Get()->GetActorLocation());
 					}
 					else
 					{
 						BlackBoard->SetValueAsObject(BlackBoardKey_Target.SelectedKeyName, NULL);
+						BlackBoard->SetValueAsVector(BlackBoardKey_Location.SelectedKeyName, FVector::Zero());
 					}
 				}
 				else
 				{
 					BlackBoard->SetValueAsObject(BlackBoardKey_Target.SelectedKeyName, NULL);
+					BlackBoard->SetValueAsVector(BlackBoardKey_Location.SelectedKeyName, FVector::Zero());
 
 				}
 			}
