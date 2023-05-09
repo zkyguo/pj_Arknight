@@ -13,5 +13,8 @@ UCLASS()
 class PJ_ARKNIGHT_API ARuleOfAIController : public AAIController
 {
 	GENERATED_BODY()
+
+public :
+	virtual AActor* FindTarget() { return nullptr; }
 	
 };

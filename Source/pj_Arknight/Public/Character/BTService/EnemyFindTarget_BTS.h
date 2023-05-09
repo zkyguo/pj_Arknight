@@ -4,7 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "BehaviorTree/BTService.h"
+#include <Character/Core/RuleOfCharacter.h>
 #include "EnemyFindTarget_BTS.generated.h"
+
 
 /**
  * 
@@ -18,10 +20,10 @@ public :
 
 	virtual void TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds) override;
 
-	UPROPERTY(EditAnywhere, Category=("BlackBoard"))
+	UPROPERTY(EditAnywhere, Category="BlackBoard")
 	struct FBlackboardKeySelector BlackBoardKey_Target;
 
-	UPROPERTY(EditAnywhere, Category=("BlackBoard"))
+	UPROPERTY(EditAnywhere, Category="BlackBoard")
 	struct FBlackboardKeySelector BlackBoardKey_Distance;
 
 	/** Notify called after GameplayTask finishes initialization (not active yet) */
@@ -32,4 +34,7 @@ public :
 
 	/** Notify called after GameplayTask changes state from Active (finishing or pausing) */
 	virtual void OnGameplayTaskDeactivated(UGameplayTask& Task) {}
+
+private: 
+	TWeakObjectPtr<class ARuleOfCharacter> Target;
 };

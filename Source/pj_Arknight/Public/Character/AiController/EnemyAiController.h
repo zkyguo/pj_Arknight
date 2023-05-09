@@ -13,5 +13,9 @@ UCLASS()
 class PJ_ARKNIGHT_API AEnemyAiController : public ARuleOfAIController
 {
 	GENERATED_BODY()
+
+public :
+
+	virtual AActor* FindTarget();
 	
 };

@@ -3,3 +3,7 @@
 
 #include "Character/AiController/ChampionAIController.h"
 
+AActor* AChampionAIController::FindTarget()
+{
+	return nullptr;
+}

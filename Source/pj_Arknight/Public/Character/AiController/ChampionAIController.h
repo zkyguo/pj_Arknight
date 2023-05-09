@@ -13,5 +13,9 @@ UCLASS()
 class PJ_ARKNIGHT_API AChampionAIController : public ARuleOfAIController
 {
 	GENERATED_BODY()
-	
+
+public : 
+	// Inherited via ARuleOfAIController
+    virtual AActor* FindTarget() override;
+
 };

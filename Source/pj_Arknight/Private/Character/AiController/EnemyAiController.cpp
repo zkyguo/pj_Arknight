@@ -3,3 +3,7 @@
 
 #include "Character/AiController/EnemyAiController.h"
 
+AActor* AEnemyAiController::FindTarget()
+{
+	return nullptr;
+}
