@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Character/Core/RuleOfCharacter.h"
+#include "gameType.h"
 #include "Enemy.generated.h"
 
 /**
@@ -17,5 +18,6 @@ class PJ_ARKNIGHT_API AEnemy : public ARuleOfCharacter
 public :
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaTime) override;
-	
+
+	virtual EGameCharacterType::Type GetType();
 };

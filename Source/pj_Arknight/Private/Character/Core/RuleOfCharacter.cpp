@@ -24,6 +24,11 @@ ARuleOfCharacter::ARuleOfCharacter()
 	TraceShowCharacterInformation->SetBoxExtent(FVector(38,38,100));
 }
 
+EGameCharacterType::Type ARuleOfCharacter::GetType()
+{
+	throw std::logic_error("The method or operation is not implemented.");
+}
+
 // Called when the game starts or when spawned
 void ARuleOfCharacter::BeginPlay()
 {

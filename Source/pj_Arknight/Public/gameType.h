@@ -13,7 +13,8 @@ namespace EGameCharacterType
 		DEFENDER,
 		SNIPER,
 		MINION,
-		BOSS
+		BOSS,
+		MAX
 	};
 		
 }

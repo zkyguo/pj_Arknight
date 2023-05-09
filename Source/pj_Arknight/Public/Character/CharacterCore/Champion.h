@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Character/Core/RuleOfCharacter.h"
+#include "gameType.h"
 #include "Champion.generated.h"
 
 
@@ -22,6 +23,8 @@ public :
 
     UPROPERTY(VisibleAnywhere,BlueprintReadOnly, Category="BaseAttribute")
 	FRotator ChampionRotator;
+
+	virtual EGameCharacterType::Type GetType();
 
 protected:
 	virtual float TakeDamage(float damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageSource);

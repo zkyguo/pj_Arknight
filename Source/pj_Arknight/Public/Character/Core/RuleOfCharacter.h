@@ -11,6 +11,7 @@
 #include <Components/ArrowComponent.h>
 #include <Components/SceneComponent.h>
 #include <Components/WidgetComponent.h>
+#include "gameType.h"
 #include "RuleOfCharacter.generated.h"
 
 
@@ -40,6 +41,9 @@ public:
 	UPROPERTY(VisibleAnywhere,BlueprintReadOnly, Category="BaseAttribute",meta=(AllowPrivateAccess = true))
 	USceneComponent* HomingPoint;
 
+
+	
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -47,6 +51,7 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	virtual EGameCharacterType::Type GetType();
 
 protected:
 	virtual float TakeDamage(float damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageSource) override;
