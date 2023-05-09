@@ -24,6 +24,7 @@ public class pj_Arknight : ModuleRules
 			"SimpleGameSetting",
 			"SimpleTutorial",
 			"ApexDestruction",
+            "GameplayTasks"
              });
     }
 }
