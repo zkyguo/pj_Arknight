@@ -21,7 +21,7 @@ void URuleOfAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 	if (Character)
 	{
 		isAttack = Character->isAttack;
-		isDead = Character->isActive();
+		isDead = !Character->isActive();
 		Velocity = Character->GetVelocity().Size();
 	}
 }

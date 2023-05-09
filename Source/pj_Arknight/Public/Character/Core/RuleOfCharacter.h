@@ -62,7 +62,7 @@ protected:
 
 public:
 	UFUNCTION(Blueprintable, BlueprintPure, Category = "Character|Attribute")
-	bool isActive() {return IsDead();}
+	bool isActive() {return !IsDead();}
 
 public :
 	FORCEINLINE AArknightPlayerController* GetGameController() { return GetWorld() ? GetWorld()->GetFirstPlayerController<AArknightPlayerController>() : NULL; }
@@ -74,4 +74,6 @@ public :
 public :
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="AnimAttribute")
 	bool isAttack;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="AnimAttribute")
+	bool isDead;
 };
