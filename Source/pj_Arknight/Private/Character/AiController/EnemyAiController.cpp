@@ -41,7 +41,7 @@ AActor* AEnemyAiController::FindTarget()
 	};*/
 
 
-	TArray<AChampion*> allChampion;
+	TArray<ARuleOfCharacter*> allChampion;
 
 	for(TActorIterator<AChampion>it(GetWorld(), AChampion::StaticClass());it;++it)
 	{

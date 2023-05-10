@@ -31,7 +31,12 @@ void AChampionAIController::Tick(float deltaTime)
 				Target = Cast<ARuleOfCharacter>(FindTarget());
 				if (Target.IsValid())
 				{
-
+					champion->ChampionRotator = FRotationMatrix::MakeFromX(Target->GetActorLocation() - GetPawn()->GetActorLocation()).Rotator();
+					if (GetPawn()->GetActorRotation() != FRotator::ZeroRotator)
+					{
+						champion->ChampionRotator -= GetPawn()->GetActorRotation();
+						champion->SetActorRotation(champion->ChampionRotator);
+					}
 				}
 			}
 
@@ -74,21 +79,16 @@ void AChampionAIController::BTService_FindTarget()
 			}
 			if (EnemyInRange.Num() > 0)
 			{
-				if (AChampion* champion = GetPawn<AChampion>()) {
 
-					champion->isAttack = true;
-				}
-				else
-				{
-					if (AChampion* champion = GetPawn<AChampion>()) {
-
-						champion->isAttack = false;
-
-					}
-				}
+				champion->isAttack = true;
+				
+			}
+			else
+			{
+				champion->isAttack = false;
 			}
 
 
 		}
-
+	}
 }
