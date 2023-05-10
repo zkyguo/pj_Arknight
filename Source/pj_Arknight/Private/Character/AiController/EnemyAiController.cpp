@@ -4,12 +4,13 @@
 #include "Character/AiController/EnemyAiController.h"
 #include <Character/CharacterCore/Champion.h>
 #include "EngineUtils.h"
+#include <gameUtils.h>
 
 
 AActor* AEnemyAiController::FindTarget()
 {
 	
-	auto GetNearestChampion = [&](const TArray<AChampion*> &AllChampion) -> AChampion*
+	/*auto GetNearestChampion = [&](const TArray<AChampion*> &AllChampion) -> AChampion*
 	{
 		if (AllChampion.Num())
 		{
@@ -34,10 +35,11 @@ AActor* AEnemyAiController::FindTarget()
 			{
 				return AllChampion[ChampionIndex];
 			}
-			
+
 		}
 		return NULL;
-	};
+	};*/
+
 
 	TArray<AChampion*> allChampion;
 
@@ -47,7 +49,7 @@ AActor* AEnemyAiController::FindTarget()
 		allChampion.Add(champion);
 	}
 
-	AChampion* NearestChampion = GetNearestChampion(allChampion);
+	AChampion* NearestChampion = Cast<AChampion>(gameUtils::FindNearestTarget(allChampion, GetPawn()->GetActorLocation()));
 
 
 	return NearestChampion;

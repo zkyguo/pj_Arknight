@@ -4,7 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "Character/Core/RuleOfAIController.h"
+#include <Character/CharacterCore/Enemy.h>
 #include "ChampionAIController.generated.h"
+
 
 /**
  * 
@@ -15,7 +17,18 @@ class PJ_ARKNIGHT_API AChampionAIController : public ARuleOfAIController
 	GENERATED_BODY()
 
 public : 
+	virtual void Tick(float deltaTime) override;
+	AChampionAIController();
 	// Inherited via ARuleOfAIController
     virtual AActor* FindTarget() override;
 
+protected:
+	void BTService_FindTarget();
+
+	UPROPERTY()
+	TArray<ARuleOfCharacter*> EnemyInRange;
+
+	TWeakObjectPtr<ARuleOfCharacter> Target;
+
+	float tickFrequency;
 };

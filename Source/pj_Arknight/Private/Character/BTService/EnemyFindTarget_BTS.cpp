@@ -11,7 +11,7 @@ void UEnemyFindTarget_BTS::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* No
 {
 	Super::TickNode(OwnerComp, NodeMemory, DeltaSeconds);
 	
-	if (AEnemyAiController* EnemyAi = Cast<AEnemyAiController>(OwnerComp.GetOwner()))
+	if (ARuleOfAIController* EnemyAi = Cast<ARuleOfAIController>(OwnerComp.GetOwner()))
 	{
 		if (UBlackboardComponent* BlackBoard = OwnerComp.GetBlackboardComponent())
 		{
