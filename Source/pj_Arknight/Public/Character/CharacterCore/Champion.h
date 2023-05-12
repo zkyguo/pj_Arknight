@@ -28,4 +28,8 @@ public :
 
 protected:
 	virtual float TakeDamage(float damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageSource);
+
+public :
+	UFUNCTION(BlueprintImplementableEvent, Category = "Events")
+		void Attack();
 };

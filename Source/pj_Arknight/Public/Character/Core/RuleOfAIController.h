@@ -16,5 +16,6 @@ class PJ_ARKNIGHT_API ARuleOfAIController : public AAIController
 
 public :
 	virtual AActor* FindTarget() { return nullptr; }
+	virtual void AttackTarget(AActor* Target);
 	
 };

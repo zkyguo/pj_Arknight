@@ -55,3 +55,8 @@ AActor* AEnemyAiController::FindTarget()
 	return NearestChampion;
 
 }
+
+void AEnemyAiController::AttackTarget(AActor* Target)
+{
+
+}

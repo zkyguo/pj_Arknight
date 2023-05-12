@@ -17,5 +17,6 @@ class PJ_ARKNIGHT_API AEnemyAiController : public ARuleOfAIController
 public :
 
 	virtual AActor* FindTarget();
+	virtual void AttackTarget(AActor* Target);
 	
 };

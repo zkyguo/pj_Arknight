@@ -15,6 +15,10 @@ class PJ_ARKNIGHT_API UAttackTarget_BTT : public UBTTaskNode
 	GENERATED_BODY()
 	
 public :
+
+	UPROPERTY(EditAnywhere, Category = BlackBoard )
+	struct FBlackboardKeySelector BlackBoard_Actor;
+
 	/** Notify called after GameplayTask finishes initialization (not active yet) */
 	virtual void OnGameplayTaskInitialized(UGameplayTask& Task) {}
 
@@ -23,4 +27,9 @@ public :
 
 	/** Notify called after GameplayTask changes state from Active (finishing or pausing) */
 	virtual void OnGameplayTaskDeactivated(UGameplayTask& Task) {}
+
+	virtual EBTNodeResult::Type ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory) override;
+
+	void InitializeFromAsset(UBehaviorTree& Asset) override;
+
 };

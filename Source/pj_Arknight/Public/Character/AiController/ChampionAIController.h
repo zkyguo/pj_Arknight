@@ -22,6 +22,10 @@ public :
 	// Inherited via ARuleOfAIController
     virtual AActor* FindTarget() override;
 
+	UFUNCTION(BlueprintImplementableEvent, Category = "Events")
+	void Attack();
+	virtual void AttackTarget(AActor* Target);
+
 protected:
 	void BTService_FindTarget();
 

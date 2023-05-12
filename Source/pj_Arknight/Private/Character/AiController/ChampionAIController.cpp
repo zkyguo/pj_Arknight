@@ -56,6 +56,11 @@ AActor* AChampionAIController::FindTarget()
 	
 }
 
+void AChampionAIController::AttackTarget(AActor* Target)
+{
+
+}
+
 void AChampionAIController::BTService_FindTarget()
 {
 	EnemyInRange.Empty();
@@ -80,7 +85,7 @@ void AChampionAIController::BTService_FindTarget()
 			if (EnemyInRange.Num() > 0)
 			{
 
-				champion->isAttack = true;
+				champion->Attack();
 				
 			}
 			else
