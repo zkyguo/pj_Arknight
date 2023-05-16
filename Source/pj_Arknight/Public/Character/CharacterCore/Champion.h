@@ -16,20 +16,17 @@ class PJ_ARKNIGHT_API AChampion : public ARuleOfCharacter
 {
 	GENERATED_BODY()
 
-public :
+public:
 	AChampion();
 
 	USkeletalMeshComponent* CharacterMesh;
 
-    UPROPERTY(VisibleAnywhere,BlueprintReadOnly, Category="BaseAttribute")
-	FRotator ChampionRotator;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "BaseAttribute")
+		FRotator ChampionRotator;
 
 	virtual EGameCharacterType::Type GetType();
 
 protected:
 	virtual float TakeDamage(float damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageSource);
 
-public :
-	UFUNCTION(BlueprintImplementableEvent, Category = "Events")
-		void Attack();
 };

@@ -1,13 +1,13 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "Character/BTService/EnemyFindTarget_BTS.h"
+#include "Character/BTService/BTSEnemyFindTarget.h"
 #include "Character/AiController/EnemyAiController.h"
 #include <AIModule/Classes/BehaviorTree/BlackboardComponent.h>
 #include <GameFramework/CharacterMovementComponent.h>
 
 
-void UEnemyFindTarget_BTS::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds)
+void UBTSEnemyFindTarget::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds)
 {
 	Super::TickNode(OwnerComp, NodeMemory, DeltaSeconds);
 	
@@ -32,8 +32,14 @@ void UEnemyFindTarget_BTS::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* No
 				{
 					if (Target->isActive())
 					{
+						
+						FVector directionTarget = EnemyAi->GetPawn()->GetActorLocation() - Target.Get()->GetActorLocation();
+						directionTarget.Normalize();
+						FVector CurrentLocation = directionTarget * 800.0f + Target.Get()->GetActorLocation();
+
+
 						BlackBoard->SetValueAsObject(BlackBoardKey_Target.SelectedKeyName, Target.Get());
-						BlackBoard->SetValueAsVector(BlackBoardKey_Location.SelectedKeyName, Target.Get()->GetActorLocation());
+						BlackBoard->SetValueAsVector(BlackBoardKey_Location.SelectedKeyName, CurrentLocation);
 					}
 					else
 					{

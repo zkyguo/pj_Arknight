@@ -29,6 +29,10 @@ EGameCharacterType::Type ARuleOfCharacter::GetType()
 	throw std::logic_error("The method or operation is not implemented.");
 }
 
+void ARuleOfCharacter::Attack_Implementation()
+{
+}
+
 // Called when the game starts or when spawned
 void ARuleOfCharacter::BeginPlay()
 {

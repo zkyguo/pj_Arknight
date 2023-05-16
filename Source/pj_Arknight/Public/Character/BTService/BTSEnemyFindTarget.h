@@ -5,14 +5,14 @@
 #include "CoreMinimal.h"
 #include "BehaviorTree/BTService.h"
 #include <Character/Core/RuleOfCharacter.h>
-#include "EnemyFindTarget_BTS.generated.h"
+#include "BTSEnemyFindTarget.generated.h"
 
 
 /**
  * 
  */
 UCLASS()
-class PJ_ARKNIGHT_API UEnemyFindTarget_BTS : public UBTService
+class PJ_ARKNIGHT_API UBTSEnemyFindTarget : public UBTService
 {
 	GENERATED_BODY()
 	

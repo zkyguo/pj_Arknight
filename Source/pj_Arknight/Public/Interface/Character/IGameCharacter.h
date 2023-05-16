@@ -13,4 +13,6 @@ public:
 	virtual float GetMaxHealth() = 0;
 	virtual bool IsTeam() = 0;
 	virtual EGameCharacterType::Type GetType() = 0;
+
+
 };

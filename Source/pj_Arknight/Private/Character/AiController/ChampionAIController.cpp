@@ -56,11 +56,6 @@ AActor* AChampionAIController::FindTarget()
 	
 }
 
-void AChampionAIController::AttackTarget(AActor* Target)
-{
-
-}
-
 void AChampionAIController::BTService_FindTarget()
 {
 	EnemyInRange.Empty();

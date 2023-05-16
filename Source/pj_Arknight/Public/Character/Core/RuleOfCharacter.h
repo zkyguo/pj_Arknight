@@ -52,6 +52,8 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	virtual EGameCharacterType::Type GetType();
+	UFUNCTION(BlueprintNativeEvent, Category = "Events")
+	void Attack();
 
 protected:
 	virtual float TakeDamage(float damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageSource) override;
@@ -76,4 +78,15 @@ public :
 	bool isAttack;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="AnimAttribute")
 	bool isDead;
+
+public :
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Character Attribute")
+	int AttackValue;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Character Attribute")
+	int AttackRange;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Character Attribute")
+	int Defense;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Character Attribute")
+	int Resistance;
+
 };
